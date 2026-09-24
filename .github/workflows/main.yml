@@ -14,13 +14,18 @@ jobs:
    
     - name: Yennoda code irukkiya?
       uses: actions/checkout@v4
-
+    
     - name: Java irukkiya?
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: 'maven' 
+    - name: Dai Java 
+      run: |
+          echo "Hha Hha Irukka enna ippo"
+          java --version
+          
     - name: maven test pannaporen 
       run: |
          cd MyWebApp/
