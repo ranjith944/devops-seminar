@@ -12,16 +12,16 @@ jobs:
 
     steps:
    
-    - name: Yennoda code irukkiya?
+    - name: code irukkanu check pannu
       uses: actions/checkout@v4
     
-    - name: Java irukkiya?
+    - name: Java install pannu
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: 'maven' 
-    - name: Dai Java 
+    - name: Dai Java irukkiya??
       run: |
           echo "Hha Hha Irukka enna ippo"
           java --version
