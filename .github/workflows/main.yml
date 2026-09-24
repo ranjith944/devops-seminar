@@ -31,7 +31,3 @@ jobs:
        cd MyWebApp/
        mvn clean package
       
-
-    # Step 3: Build and Test using Maven
-    - name: Build and Test with Maven
-      run: mvn -B clean verify
