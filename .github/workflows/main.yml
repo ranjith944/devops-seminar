@@ -1,0 +1,33 @@
+name: Build and test panna porom
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+   
+    - name: Yennoda code irukkiya?
+      uses: actions/checkout@v4
+
+    - name: Java irukkiya?
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: 'maven' 
+    - name: maven test pannaporen 
+      run: mvn test
+
+    - name: maven build panna poren
+      run: mvn clean package
+      
+
+    # Step 3: Build and Test using Maven
+    - name: Build and Test with Maven
+      run: mvn -B clean verify
