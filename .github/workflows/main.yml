@@ -22,10 +22,14 @@ jobs:
         distribution: 'temurin'
         cache: 'maven' 
     - name: maven test pannaporen 
-      run: mvn test
+      run: |
+         cd MyWebApp/
+         mvn test
 
     - name: maven build panna poren
-      run: mvn clean package
+      run: |
+       cd MyWebApp/
+       mvn clean package
       
 
     # Step 3: Build and Test using Maven
